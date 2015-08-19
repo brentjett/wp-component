@@ -4,6 +4,9 @@ WordPress currently has three different expressions of a partial view. Inside th
 
 Because these 3 expressions seek to accomplish essentially the same goal, output something visual and reusable, this leads me to suggest that WordPress might benefit from a unified format. Declare once, use everywhere.
 
+## Benefits
+Build one part that can be used in mulitple places. In the event you'd want to modify your output or style your component differently, a context variable containing either "widget", "shortcode", or "template" is passed to the render method of your component class.
+
 ## Usage
 Instead of creating a widget and/or creating a shortcode, component is designed to be both (if desired). Simply subclass WP_Component just as you would have WP_Widget.
 ```php
