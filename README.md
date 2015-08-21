@@ -6,6 +6,9 @@ WordPress currently has two different expressions of a partial html view and eac
 
 Because these 3 expressions seek to accomplish essentially the same goal, output something visual and reusable, this leads me to suggest that WordPress might benefit from a unified format. Declare once, use everywhere.
 
+## API Pattern / Syntax
+There are a couple different patterns we could follow to implement this. OOP, functional, or file references. Here's some work on what that could look like. [Pattern Options](docs/syntax.md)
+
 ## Benefits
 Build one part that can be used in mulitple places. In the event you'd want to modify your output or style your component differently, a context variable containing either "widget", "shortcode", or "template" is passed to the render method of your component class.
 

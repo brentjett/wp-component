@@ -9,13 +9,23 @@ A class would be the simplest way to implement a component API because WP_Widget
 <?php
 class extends WP_Component {
 
-    function __construct() {}
-
-    function render($context) {
-        // output your html here.
-        // If there are differences between how something might render as a widget vs. a shortcode, use $context to specify conditions ($context == 'widget' or $context == 'shortcode').
+    function __construct() {
+        parent::__construct(array(
+            'handle' => 'my-component',
+            'label' => 'My Component',
+            'description' => 'This is a component to display a whatever',
+            'icon' => 'dashicons-editor-insertmore',
+            'fields' => array()
+        ));
     }
 
+    function render($context) {
+        /*
+        Output your html here.
+        If there are differences between how something might render as a widget vs. a shortcode,
+        use $context to specify conditions ($context == 'widget' or $context == 'shortcode').
+        */
+    }
 }
 ?>
 ```
