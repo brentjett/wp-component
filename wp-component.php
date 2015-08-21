@@ -12,10 +12,12 @@ License: GPL v2 or later
 define( 'WP_COMPONENT_API_DIR', dirname( __FILE__ ));
 defined( 'ABSPATH' ) or die( 'No script nonsense please!' );
 
+// Include base class and helper functions.
 require_once WP_COMPONENT_API_DIR . '/includes/class-wp-component.php';
 require_once WP_COMPONENT_API_DIR . '/includes/functions.php';
 
-require_once WP_COMPONENT_API_DIR . '/examples/class-author-component.php';
+// Include example components
+require_once WP_COMPONENT_API_DIR . '/components/class-author-component.php';
 
 function wp_init_components() {
 

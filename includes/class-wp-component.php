@@ -1,11 +1,34 @@
 <?php
-
+/**
+* WP_Component Class
+* Base class for object-oriented component specification.
+*/
 class WP_Component extends WP_Widget {
 
+    /**
+    * @var string - short name for widget or shortcode.
+    * Used as tag name for shortcodes: [my_handle]
+    */
     public $handle;
+
+    /**
+    * @var string - longform name, for display in admin UI. "MY Component"
+    */
     public $label;
+
+    /**
+    * @var array - array of input fields for instance data
+    */
     public $fields;
+
+    /**
+    * @var string - Description of what the component does.
+    */
     public $description;
+
+    /**
+    * @var string - dashicon class or url to icon file
+    */
     public $icon;
 
     function __construct($args = array()) {
